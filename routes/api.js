@@ -18,10 +18,17 @@ router.get("/ninjas",function(req,res){
 router.post("/ninjas",function(req,res){
 
     //console.log('Get Request');
-    //return value on api call
+    //return value on api call\
+    //console.log(req.body);
     res.send({
-        type:'POST'
+        type:'POST',
+        details:{
+            name:req.body.name,
+            designation:req.body.designation
+        }
     });
+
+
     res.end();
 });
 
